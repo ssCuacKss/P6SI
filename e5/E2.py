@@ -11,6 +11,6 @@ with open(args.entrada,"r") as f:
     text = f.read()
 
 
-hash = MD5.new(bytes(text,'utf-8'))
+hash = SHA256.new(bytes(text,'utf-8'))
 
 print(hash.hexdigest())
