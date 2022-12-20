@@ -1,5 +1,7 @@
 import argparse
 from Crypto.Hash import SHA256, MD5
+import random
+import string
 
 parser = argparse.ArgumentParser(description='Cifra un fichero de texto en MD5')
 
@@ -9,7 +11,9 @@ parser.add_argument("password",help="el nombre del fichero a encriptar y compara
 
 args = parser.parse_args()
 
-hashedPassword = SHA256.new(bytes(args.password,'utf-8'))
+salt = random.choice(string.ascii_letters)+random.choice(string.ascii_letters)+random.choice(string.ascii_letters)+random.choice(string.ascii_letters)
+
+hashedPassword = SHA256.new(bytes(salt+args.password,'utf-8'))
 
 line = args.username +":"+ hashedPassword.hexdigest()+"\n"
 
