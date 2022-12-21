@@ -3,11 +3,11 @@ from Crypto.Hash import SHA256, MD5
 import random
 import string
 
-parser = argparse.ArgumentParser(description='Cifra un fichero de texto en MD5')
+parser = argparse.ArgumentParser(description='introduce usuarios en el fichero shadow con contraseña encriptada')
 
-parser.add_argument("username",help="el nombre del fichero a encriptar y comparar con entrada2", type=str)
+parser.add_argument("username",help="nombre de usuario", type=str)
 
-parser.add_argument("password",help="el nombre del fichero a encriptar y comparar con entrada2", type=str)
+parser.add_argument("password",help="contraseña de usuario", type=str)
 
 args = parser.parse_args()
 

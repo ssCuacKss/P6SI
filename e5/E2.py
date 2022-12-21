@@ -1,7 +1,7 @@
 import argparse
 from Crypto.Hash import SHA256, MD5
 
-parser = argparse.ArgumentParser(description='Cifra un fichero de texto en MD5')
+parser = argparse.ArgumentParser(description='obtine el hash un fichero de texto en SHA256')
 
 parser.add_argument("entrada",help="el nombre del fichero a encriptar", type=str)
 

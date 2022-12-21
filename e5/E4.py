@@ -1,11 +1,11 @@
 import argparse
 from Crypto.Hash import SHA256, MD5
 
-parser = argparse.ArgumentParser(description='Cifra un fichero de texto en MD5')
+parser = argparse.ArgumentParser(description='compara dos hashes en  SHA256')
 
-parser.add_argument("hashValue",help="el nombre del fichero a encriptar y comparar con entrada2", type=str)
+parser.add_argument("hashValue",help=" hash a comparar con entrada2", type=str)
 
-parser.add_argument("entrada",help="el nombre del fichero a encriptar y comparar con entrada", type=str)
+parser.add_argument("entrada",help="texto a obtener su hash y comparar con hashValue", type=str)
 
 args= parser.parse_args()
 
